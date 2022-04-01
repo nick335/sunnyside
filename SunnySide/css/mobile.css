@@ -1,0 +1,68 @@
+/*nav structure*/
+.nav-structure{
+	width: 100vm;
+}
+.nav-structure ul{
+	display: flex;
+	flex-direction: column;
+}
+/*showcase*/
+#showcase{
+	/*background-size: contain;*/
+	width: 100%;
+	min-height: 100%;
+	object-fit: cover;
+}
+#showcase .showcase-content h1{
+	padding: 0;
+	font-size: 10px;
+	color: red;
+}
+.display-content{
+	padding: 1rem;
+}
+/*grid section*/
+
+.grid-container{
+	grid-template-columns: 1fr;
+}
+.grid-container .card:nth-child(5),
+.grid-container .card:last-child {
+	position: absolute;
+	overflow: hidden;
+}
+.grid-container .card:nth-child(5) .display-content h3,
+.grid-container .card:last-child .display-content h3 {
+	position: absolute;
+	overflow: hidden;
+	font-size: 1.5rem;
+	padding-bottom: 100px;
+	color: hsl(167, 40%, 24%);
+	top: 370px;
+	left: 35%;
+	
+}
+.grid-container .card:nth-child(5) .display-content,
+.grid-container .card:last-child .display-content {
+	padding: 0;
+}
+/*testimonial-struct*/
+.testimonial-structure{
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+}
+.testimonial-structure> h2{
+	/*grid-column: 1/ span 2;*/
+
+}
+/*footer*/
+.footer-structure{
+	padding: 0;
+}
+.footer-structure ul li{
+	padding: 0;
+}
+.footer-structure .icons img{
+	padding: 0;
+}
