@@ -72,7 +72,7 @@ ul{
 #showcase .showcase-content h1{
 	z-index: 1;
 	text-align: center;
-	padding: 100px  40px;
+	padding-top: 30px;
 	font-size: 4rem;
 	font-family: 'Fraunces', serif;
 	color: var(--nav-textcolor);
@@ -88,98 +88,102 @@ ul{
 #grid-section{
 	/*overflow: hidden;*/
 }
-.grid-container{
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+.flex-container {
+	display: flex;
+	flex-direction: row;
 }
 .card{
+	width: 50%;
 	height: auto;
-}
-.img-card {
-	object-fit: contain;
-	margin-bottom: 0;
-	margin-top: 0;
 }
 .img-card img{
 	width: 100%;
-	height: 500px;
+	height: 550px;
+  	image-rendering: auto;
+  	image-rendering: crisp-edges;
+  	image-rendering: pixelated;
 }
+
 .card{
 	line-height: 0;
 }
+
 .display-card{
 	background: var(--secondary-color);
-	padding-bottom: 10rem;
-	height: 500px;
+	/*padding-bottom: 10rem;*/
+	height: 550px;
 }
 .display-content{
-	padding:7rem;
+	padding:9rem 7rem;
 }
 .display-content h3{
 	line-height: 1;
 	font-size: 2.5rem;
 	font-family: 'Fraunces', serif;
-	padding-bottom: 30px;
 	color: hsl(198, 62%, 26%);
 }
 .display-content p{
-	padding-bottom: 30px;
-	font:'Fraunces', serif;
+	/*padding-bottom: 30px;*/
+	padding:30px 0;
+	font-size: 1rem;
+	color: hsl(213, 9%, 39%);
+	font:'Barlow', serif;
 	line-height: 1.5;
 }
-.display-content a{
+.display-content div a{
 	font-family: 'Fraunces', serif;
 	cursor: pointer;
 	color: hsl(198, 62%, 26%);
 }
-.display-content a:hover{
+.display-content div a:hover{
 	border-bottom: 3px solid hsl(51, 100%, 49%);
 }
-.grid-container .card:nth-child(4) .display-content a:hover{
+
+#grid-section .flex-container:nth-child(2)  .card .display-content div a:hover{
 	border-bottom: 3px solid hsl(7, 99%, 70%);
 }
-.grid-container  .card:nth-child(5) .display-content{
+
+#grid-section .flex-container:nth-child(3)  .card:nth-child(1) .display-content{
 	background: url(../desktop/image-graphic-design.jpg) no-repeat;
 	background-size: cover;
-	height: inherit;
+	background-position: center center;
+	height: 510px;
 }
-.grid-container .card:last-child .display-content{
+
+#grid-section .flex-container:nth-child(3)  .card:nth-child(2) .display-content{
 	background: url(../desktop/image-photography.jpg) no-repeat;
 	background-size: cover;
-	height: inherit;
+	background-position: center center;
+	height: 510px;
+	width: 100%;
 }
-.grid-container .card:nth-child(5) .display-content,
-.grid-container .card:last-child .display-content {
-	padding: 17rem 10rem;
-}
-.grid-container .card:nth-child(5),
-.grid-container .card:last-child {
+#grid-section .flex-container:nth-child(3)  .card:nth-child(1),
+#grid-section .flex-container:nth-child(3)  .card:nth-child(2) {
 	position: relative;
 }
-.grid-container .card:nth-child(5) .display-content h3,
-.grid-container .card:last-child .display-content h3 {
+#grid-section .flex-container:nth-child(3)  .card:nth-child(1) .display-content h3,
+#grid-section .flex-container:nth-child(3)  .card:nth-child(2) .display-content h3 {
 	position: absolute;
 	font-size: 1.5rem;
-	padding-bottom: 100px;
+	/*padding-bottom: 100px;*/
 	color: hsl(167, 40%, 24%);
-	top: 370px;
+	top: 340px;
 	left: 35%;
 	
 }
-.grid-container .card:nth-child(5) .display-content p,
-.grid-container .card:last-child .display-content p {
+#grid-section .flex-container:nth-child(3)  .card:nth-child(1) .display-content p,
+#grid-section .flex-container:nth-child(3)  .card:nth-child(2) .display-content p {
 	font-size: 14px;
 	text-align: center;
 	width: 300px;
 	color: hsl(167, 40%, 24%);
 	line-height: 1.7;
 	position: absolute;
-	top: 420px;
+	top: 350px;
 	left: 26%;
-
 }
-.grid-container .card:last-child  .display-content h3,
-.grid-container .card:last-child .display-content p {
+#grid-section .flex-container:nth-child(3)  .card:nth-child(2) .display-content h3,
+#grid-section .flex-container:nth-child(3)  .card:nth-child(2) .display-content p {
 	color: hsl(198, 62%, 26%);
 }
 /*testimonial section*/
@@ -190,7 +194,7 @@ ul{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 1rem;
-	padding: 9rem;
+	padding: 5rem;
 }
 .testimonial-structure> h2{
 	grid-column: 1/ span 4;
@@ -198,7 +202,7 @@ ul{
 	font-family: 'Fraunces', serif;
 	color: hsl(210, 4%, 67%);
 	text-align: center;
-	margin-bottom: 10px;
+	margin-bottom: 50px;
 }
 .box img{
 	height: 70px;
@@ -230,7 +234,7 @@ ul{
 /*image display*/
 .image-display-structure{
 	display: flex;
-	width: ;
+	 
 }
 .image-display-structure img{
 	width: 25%;
@@ -239,6 +243,7 @@ ul{
 /*footer*/
 footer{
 	background: hsl(168, 44%, 70%);
+
 }
 .footer-structure{
 	padding: 4rem;
